@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Products from "./components/Products";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Props:</h1>
+      <hr></hr>
+      <Products
+        id="1"
+        name="first"
+        desc="This is props desc 1"
+        amount="5"
+        price={45}
+      />
+      <Products
+        id="2"
+        name="second"
+        // desc='This is props desc 1'
+        amount="5"
+        price={65}
+      />
+      <Products
+        id="3"
+        name="third"
+        desc='This is props desc 3'
+        amount="545"
+        price={65654}
+      />
     </div>
   );
 }
