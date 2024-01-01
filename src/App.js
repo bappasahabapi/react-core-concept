@@ -1,32 +1,14 @@
 import "./App.css";
-import Products from "./components/Products";
+import ConRending from "./lesson/conditon-rendering/Emaple-1/ConRending";
+import ConditionalRending2 from "./lesson/conditon-rendering/Example-2/ConditionalRending2";
 
 function App() {
   return (
     <div className="App">
-      <h1>React Props:</h1>
+      <h1>React Conditional Rendering </h1>
       <hr></hr>
-      <Products
-        id="1"
-        name="first"
-        desc="This is props desc 1"
-        amount="5"
-        price={45}
-      />
-      <Products
-        id="2"
-        name="second"
-        // desc='This is props desc 1'
-        amount="5"
-        price={65}
-      />
-      <Products
-        id="3"
-        name="third"
-        desc='This is props desc 3'
-        amount="545"
-        price={65654}
-      />
+      <ConRending/>
+      <ConditionalRending2/>
     </div>
   );
 }
