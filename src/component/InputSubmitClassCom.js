@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class TextAreaClassComponent extends React.Component {
+export default class SubmitForm extends React.Component {
   state = {
     title: "Write here",
     text: "Write your comment",
@@ -34,11 +34,20 @@ export default class TextAreaClassComponent extends React.Component {
     }
   };
 
+  submitHandler =(e)=>{
+
+    const {title,text,jsLibrary,isChecked}=this.state;
+    e.preventDefault();
+    console.log(title,text,jsLibrary,isChecked)
+  }
+
   render() {
     return (
       <div>
         <h1>Text Area Class Component</h1>
-        <form>
+
+        <form  onSubmit={this.submitHandler}>
+
           <p>{this.state.title}</p>
           <input
             type="text"
@@ -78,6 +87,7 @@ export default class TextAreaClassComponent extends React.Component {
             value="Submit-Button"
            
            />
+           {/* <button type="submit">Submit-Button</button> */}
         </form>
       </div>
     );

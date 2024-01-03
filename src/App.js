@@ -1,14 +1,15 @@
 
 import ClassInputBox from './component/InputBoxClassComponet';
 import FunctionalInputBox from './component/InputBoxFunctionalComponent';
+import SubmitForm from './component/InputSubmitClassCom';
 import TextAreaClassComponent from './component/TextAreaClassComponent';
 
 
 function App() {
   return (
-    <div className="App">
-
-      <TextAreaClassComponent/>
+    <div style={{textAlign:'center'}}>
+      <SubmitForm/>
+      {/* <TextAreaClassComponent/> */}
      <hr />
      {/* <ClassInputBox/>
      <hr />
