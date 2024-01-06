@@ -13,7 +13,8 @@ export default function Todo() {
         const warning = newTextValue.includes('.js')
             ? 'This is functional component hook'
             : null;
-        //update state handle here
+
+        //update state handle here [this change the new todo and warning value]
       setTodo(newTextValue);
       setWarning(warning)
     }
