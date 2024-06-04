@@ -8,6 +8,7 @@ import LoginFour from "./components/LoginFour";
 import LoginFive from "./components/LoginFive";
 import FormMultipleInputInOneState from "./components/FormMultipleInputInOneState";
 import Validation from "./components/Validation";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -40,10 +41,15 @@ function App() {
         <Routes>
           <Route path="/validation" element={ <Validation />}/>
         </Routes>
+        <Routes>
+          <Route path="/signup" element={ <SignUp />}/>
+        </Routes>
  
         </main>
+        <h1 style={{color:'blue', textAlign:'center'}}>Reusable Input Component</h1>
       </>
     </Router>
+    
   );
 }
 

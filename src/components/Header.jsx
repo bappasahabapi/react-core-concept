@@ -7,7 +7,10 @@ export default function Header() {
     <header>
       <img src={logoImg} alt="A form and a pencil" />
       <h4>React Forms</h4>
+      
       <div style={{display:'flex', justifyContent:'center',gap:'10px'}} >
+       <div><a href='/' >Home</a> </div> 
+       <div><a href='/signup' >Signup</a> </div> 
        <div style={{marginRight:"5px"}}><a href='/login'  >login</a> </div> 
        <div><a href='/login-1' >login-1</a> </div> 
        <div><a href='/login-2' >login-2</a> </div>
