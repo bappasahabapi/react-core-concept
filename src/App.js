@@ -3,6 +3,9 @@ import Header from "./components/Header";
 import Login from "./components/Login";
 import LoginOne from "./components/LoginOne";
 import LoginTwo from "./components/LoginTwo";
+import LoginThree from "./components/LoginThree";
+import LoginFour from "./components/LoginFour";
+import LoginFive from "./components/LoginFive";
 
 function App() {
   return (
@@ -19,10 +22,16 @@ function App() {
         <Routes>
           <Route path="/login-2" element={ <LoginTwo />}/>
         </Routes>
-          <hr />
-          {/* <LoginOne /> */}
-          <hr />
-          {/* <Login /> */}
+        <Routes>
+          <Route path="/login-3" element={ <LoginThree />}/>
+        </Routes>
+        <Routes>
+          <Route path="/login-4" element={ <LoginFour />}/>
+        </Routes>
+        <Routes>
+          <Route path="/login-5" element={ <LoginFive />}/>
+        </Routes>
+ 
         </main>
       </>
     </Router>
