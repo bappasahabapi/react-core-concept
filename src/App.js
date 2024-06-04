@@ -7,6 +7,7 @@ import LoginThree from "./components/LoginThree";
 import LoginFour from "./components/LoginFour";
 import LoginFive from "./components/LoginFive";
 import FormMultipleInputInOneState from "./components/FormMultipleInputInOneState";
+import Validation from "./components/Validation";
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/login-5" element={ <LoginFive />}/>
+        </Routes>
+ 
+        <Routes>
+          <Route path="/validation" element={ <Validation />}/>
         </Routes>
  
         </main>

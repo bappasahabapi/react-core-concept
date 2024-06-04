@@ -11,6 +11,7 @@ export default function Header() {
        <div style={{marginRight:"5px"}}><a href='/login'  >login</a> </div> 
        <div><a href='/login-1' >login-1</a> </div> 
        <div><a href='/login-2' >login-2</a> </div>
+       <div><a href='/validation' >validation</a> </div>
        <div><a href='/login-3' >useRef</a> </div>
        <div><a href='/login-4' >FormData</a> </div>
        <div><a href='/multiple' >FormMultipleInputInOneState</a> </div>
