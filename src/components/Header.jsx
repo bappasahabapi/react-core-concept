@@ -13,7 +13,8 @@ export default function Header() {
        <div><a href='/login-2' >login-2</a> </div>
        <div><a href='/login-3' >useRef</a> </div>
        <div><a href='/login-4' >FormData</a> </div>
-       <div><a href='/login-5' >Multiple</a> </div>
+       <div><a href='/multiple' >FormMultipleInputInOneState</a> </div>
+       <div><a href='/login-5' >Reset & Clear</a> </div>
       </div>
     </header>
   );

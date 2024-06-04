@@ -6,6 +6,7 @@ import LoginTwo from "./components/LoginTwo";
 import LoginThree from "./components/LoginThree";
 import LoginFour from "./components/LoginFour";
 import LoginFive from "./components/LoginFive";
+import FormMultipleInputInOneState from "./components/FormMultipleInputInOneState";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/login-4" element={ <LoginFour />}/>
+        </Routes>
+        <Routes>
+          <Route path="/multiple" element={ <FormMultipleInputInOneState />}/>
         </Routes>
         <Routes>
           <Route path="/login-5" element={ <LoginFive />}/>

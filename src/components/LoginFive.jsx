@@ -1,66 +1,62 @@
 import React, { useState } from "react";
 
 export default function LoginFive(){
-  const [formData, setFormData] = useState({
-    title: "Write here",
-    text: "Write your comment",
-    jsLibrary: "React",
-    isChecked: true,
-  });
+  // Declare the state variables and set their initial values
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
 
-  const handleChange = (e) => {
-    const { type, value, checked } = e.target;
+   // Function to handle form submission
+   const handleSubmit = (event) => {
+    event.preventDefault();
 
-    setFormData((prevData) => ({
-      ...prevData,
-      [type === "checkbox" ? "isChecked" : type.toLowerCase()]: type === "checkbox" ? checked : value,
-    }));
+    // Your form submission code here...
+
+    // Clear the input fields after submission
+    setName('');
+    setEmail('');
+    setCountry('')
   };
+  console.log(name,email,country)
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log(formData.title, formData.text, formData.jsLibrary, formData.isChecked);
-  };
 
   return (
-    <div>
-      <h1 style={{color:'black', textAlign:'center'}}>Text Area Functional Component</h1>
-      <form onSubmit={submitHandler}>
-        <p>{formData.title}</p>
-        <input
-          type="text"
-          placeholder="Enter any text"
-          value={formData.title}
-          onChange={handleChange}
-        />
-        <br />
-        <br />
-        <textarea
-          name="text"
-          placeholder="This is a text area"
-          value={formData.text}
-          onChange={handleChange}
-        />
-        <br /> <br />
-        <label>
-          Select box
+    <>
+      <h4 style={{color:'black', textAlign:'center'}}>Handle and Clear multiple input fields</h4>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+            />
+          </label>
           <br />
-          <select value={formData.jsLibrary} onChange={handleChange}>
-            <option value="React">React</option>
-            <option value="Angular">Angular</option>
-            <option value="Vue">Vue</option>
-          </select>
-        </label>
-        <br /> <br />
-        <input
-          type="checkbox"
-          checked={formData.isChecked}
-          onChange={handleChange}
-        />
-        <br /> <br />
-        <input type="submit" value="Submit-Button" />
-      </form>
-    </div>
+          <label>
+            Email:
+            <input
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Country
+            <input
+              type="country"
+              value={country}
+              onChange={(event) => setCountry(event.target.value)}
+            />
+          </label>
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </>
   );
+
 };
 
