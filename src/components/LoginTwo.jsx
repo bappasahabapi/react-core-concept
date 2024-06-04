@@ -1,29 +1,38 @@
 import { useState } from "react";
 
-export default function LoginOne() {
+export default function LoginTwo() {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [enterValues, setEnterValues] =useState({
+    email:'',
+    password:'',
+  })
 
   //todo: using combined state
-
   function handleSubmit(event) {
     event.preventDefault();
-    console.log("userEmail:" + email);
-    console.log("userPassword:" + password);
+
+    console.log(enterValues)
+    
   }
 
-  function handleEmailChange(event) {
-    setEmail(event.target.value);
+  function handleInputChange(identifier,value){
+    setEnterValues(preValues=>({
+      ...preValues,
+      [identifier]:value
+    }))
   }
-  function handlePassChange(event) {
-    setPassword(event.target.value);
-  }
+
+  // function handleEmailChange(event) {
+  //   setEmail(event.target.value);
+  // }
+  // function handlePassChange(event) {
+  //   setPassword(event.target.value);
+  // }
 
   return (
     <form onSubmit={handleSubmit}>
-      <p className="example">Example - 1</p>
-      <h2>Login</h2>
+      <p className="example">Managing & Getting User Input Generic Handler</p>
+      <h2>Login-2</h2>
 
       <div className="control-row">
         <div className="control no-margin">
@@ -32,8 +41,10 @@ export default function LoginOne() {
             id="email"
             type="email"
             name="email"
-            onChange={handleEmailChange}
-            value={email}
+            onChange={(event)=>handleInputChange('email',event.target.value)}
+            value={enterValues.email}
+            // onChange={handleEmailChange}
+            // value={email}
           />
         </div>
 
@@ -43,14 +54,16 @@ export default function LoginOne() {
             id="password"
             type="password"
             name="password"
-            onChange={handlePassChange}
-            value={password}
+            onChange={(event)=>handleInputChange('password',event.target.value)}
+            value={enterValues.password}
+            // onChange={handlePassChange}
+            // value={password}
           />
         </div>
       </div>
 
       <p className="form-actions">
-        <button className="button button-flat">Reset</button>
+        <button className="button button-flat" type="reset">Reset</button>
         <button className="button">Login</button>
         {/* <button className="button" type="submit" onClick={handleSubmit}>
           Login

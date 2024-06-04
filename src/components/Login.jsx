@@ -6,7 +6,7 @@ export default function Login() {
   }
   return (
     <form onSubmit={handleSubmit}>
-    <p className="example">Example - 0</p>
+    <p className="example">Without UseState</p>
       <h2>Login</h2>
 
       <div className="control-row">

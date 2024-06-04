@@ -22,8 +22,8 @@ export default function LoginOne() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p className="example">Example - 1</p>
-      <h2>Login</h2>
+      <p className="example">Using UseState() Hook</p>
+      <h2>Login-1</h2>
 
       <div className="control-row">
         <div className="control no-margin">

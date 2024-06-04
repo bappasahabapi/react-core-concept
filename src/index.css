@@ -36,6 +36,14 @@ header h1 {
   letter-spacing: 0.2rem;
   color: #2f4444;
 }
+header h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  letter-spacing: 0.2rem;
+  color: #2f4444;
+}
 
 form {
   width: 90%;
@@ -161,4 +169,7 @@ fieldset {
 
 .example {
   text-align: center;
+  color: #33c4f0;
+  font-weight: 700;
 }
+
